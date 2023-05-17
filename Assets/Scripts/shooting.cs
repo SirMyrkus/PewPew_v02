@@ -21,7 +21,7 @@ public class shooting : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         GameObject ShotBullet = Instantiate(bullet, rohr.transform.position, Quaternion.identity);
         ShotBullet.GetComponent<Rigidbody>().AddForce(rohr.transform.forward * speed, ForceMode.Impulse);
@@ -31,6 +31,9 @@ public class shooting : MonoBehaviour
     IEnumerator DestroyBullet(GameObject bullet)
     {
         yield return new WaitForSeconds(3);
-        Destroy(bullet);
+        if (bullet != null)
+        {
+            Destroy(bullet);
+        }
     }
 }
