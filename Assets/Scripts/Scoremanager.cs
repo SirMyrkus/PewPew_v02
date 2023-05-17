@@ -5,14 +5,14 @@ using UnityEngine;
 public class Scoremanager : MonoBehaviour
 {
     public int score;
-    void Start()
+    int finalscore;
+    
+    public void End()
     {
-        
+        if (finalscore >= PlayerPrefs.GetInt("Highscore"))
+        {
+            PlayerPrefs.SetInt("Highscore", finalscore);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
