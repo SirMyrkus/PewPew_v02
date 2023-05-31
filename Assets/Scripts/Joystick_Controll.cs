@@ -28,8 +28,7 @@ public class Joystick_Controll : MonoBehaviour
             Player.transform.rotation = Quaternion.Euler(0, -rotY, 0);
         }
 
-        Player.GetComponent<Rigidbody>().AddRelativeForce(Player.transform.forward * inputY * speed);
-        Player.GetComponent<Rigidbody>().AddRelativeForce(Player.transform.right * -inputX * speed);
+       
         //Player.GetComponent<Rigidbody>().AddForce(transform.forward * inputY * speed);
 
 
@@ -39,6 +38,12 @@ public class Joystick_Controll : MonoBehaviour
 
 
         //Player.GetComponent<Rigidbody>().velocity = transform.forward * inputY * speed;
+    }
+
+    private void FixedUpdate()
+    {
+        Player.GetComponent<Rigidbody>().AddRelativeForce(Player.transform.forward * inputY * speed);
+        Player.GetComponent<Rigidbody>().AddRelativeForce(Player.transform.right * -inputX * speed);
     }
 }
 
