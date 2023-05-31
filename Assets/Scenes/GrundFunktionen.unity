@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7169d6ba4dc384c8cf7fa61cb5604f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 20
   joystick: {fileID: 1322659424}
   inputX: 0
   inputY: 0
@@ -863,7 +863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2145888318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157855633586655606, guid: e7468f39210624d4e8e3a318d314d242,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2157855633586655607, guid: e7468f39210624d4e8e3a318d314d242,
         type: 3}
