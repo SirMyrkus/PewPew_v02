@@ -20,6 +20,7 @@ public class HealthEnemy : MonoBehaviour
         {
             health -= 1;
             Destroy(collision.gameObject);
+            Debug.Log("destroy");
         }
     }
 
@@ -28,6 +29,7 @@ public class HealthEnemy : MonoBehaviour
         if (health <= 0)
         {
             scoremanager.score += plusscore;
+            Debug.Log("Destroy self");
             Destroy(gameObject);
         }
     }
