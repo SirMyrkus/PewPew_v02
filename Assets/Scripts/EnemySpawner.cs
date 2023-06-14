@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnEnemy(enemyInterval, enemy));
-        StartCoroutine(spawnEnemy(enemy2Interval, enemy2));
+        //StartCoroutine(spawnEnemy(enemy2Interval, enemy2));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)

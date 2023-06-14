@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Scoremanager : MonoBehaviour
 {
     public int score;
     int finalscore;
-    [SerializeField] GameObject scoreN, scoreT, highscoreN, highscoreT;
+    [SerializeField] GameObject scoreN, scoreT, highscoreN, highscoreT, retryB;
     public TextMeshProUGUI scoreText, highscoreText, finalscoreText;
 
     public void End()
@@ -27,11 +28,19 @@ public class Scoremanager : MonoBehaviour
 
         highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
         finalscoreText.text = finalscore.ToString();
+
+        retryB.SetActive(true);
+        Time.timeScale = 0;
     }
 
     private void Update()
     {
         scoreText.text = score.ToString();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

@@ -16,6 +16,7 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.Find("Crystal").transform;
         enemy.SetDestination(Player.position);
     }
 }
