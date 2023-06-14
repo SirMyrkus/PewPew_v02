@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +10,11 @@ public class Scoremanager : MonoBehaviour
     int finalscore;
     [SerializeField] GameObject scoreN, scoreT, highscoreN, highscoreT, retryB;
     public TextMeshProUGUI scoreText, highscoreText, finalscoreText;
-
+    private void Start()
+    {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Time.timeScale = 1;
+    }
     public void End()
     {
         finalscore = score;
