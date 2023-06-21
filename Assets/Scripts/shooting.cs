@@ -6,6 +6,7 @@ public class shooting : MonoBehaviour
 {
     [SerializeField] GameObject bullet, rohr;
     [SerializeField] float speed;
+    [SerializeField] AudioSource shootAudio;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class shooting : MonoBehaviour
         GameObject ShotBullet = Instantiate(bullet, rohr.transform.position, Quaternion.identity);
         ShotBullet.GetComponent<Rigidbody>().AddForce(rohr.transform.forward * speed, ForceMode.Impulse);
         StartCoroutine("DestroyBullet", ShotBullet);
+        shootAudio.Play();
+
     }
 
     IEnumerator DestroyBullet(GameObject bullet)
