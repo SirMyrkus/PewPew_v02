@@ -8,7 +8,7 @@ public class Scoremanager : MonoBehaviour
 {
     public int score;
     int finalscore;
-    [SerializeField] GameObject scoreN, scoreT, highscoreN, highscoreT, retryB;
+    [SerializeField] GameObject scoreN, scoreT, highscoreN, highscoreT, retryB, shootg;
     public TextMeshProUGUI scoreText, highscoreText, finalscoreText;
     private void Start()
     {
@@ -33,6 +33,7 @@ public class Scoremanager : MonoBehaviour
         finalscoreText.text = finalscore.ToString();
 
         retryB.SetActive(true);
+        shootg.SetActive(false);
         Time.timeScale = 0;
     }
 
